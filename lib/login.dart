@@ -137,6 +137,7 @@ class _LoginState extends State<Login> {
     );
   }
 
+  //login code
   void login() async {
     try {
       final User user = (await auth.signInWithEmailAndPassword(
