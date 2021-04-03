@@ -198,6 +198,7 @@ class _RegisterState extends State<Register> {
             email: _emailcontroller.text, password: _passcontroller.text))
         .user;
     if (user != null) {
+      //cloud store user data
       await Store()
           .storeData(_displayname.text, _emailcontroller.text, user.uid);
       await user.updateProfile(displayName: _displayname.text);
@@ -208,7 +209,7 @@ class _RegisterState extends State<Register> {
               )));
     }
   }
-
+  //sharedpreference not working
   // display() {
   //   if (displayName != null) {
   //     return Text(
